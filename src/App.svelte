@@ -93,9 +93,6 @@
 		display: inline-block;
 		font-size: 2rem;
 		vertical-align: middle;
-
-		border: 1px dotted gray;
-
 	}
 
 	input, select, button {
@@ -121,12 +118,12 @@
 		margin: 1em auto;
 		padding: 1em;
 		width: 50%;
+
 		border: 1px dotted gray;
 	}
 
 	main {
 		flex: 1;
-		border: 1px dotted gray;
 	}
 
 	footer {
@@ -135,8 +132,7 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 1em;
-		border: 1px solid black;
-		min-width: 320px;
+		border-top: 1px solid black;
 	}
 
 	footer div {
