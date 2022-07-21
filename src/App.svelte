@@ -27,41 +27,53 @@
 
 <div id="app">
 
-	<header>
-		<a href="/">
-			<img src="/scorecard.svg" class="logo" alt="Scorecard Logo" />
-			<h1 class="title">Scorecard</h1>
-		</a>
-	</header>
+		<header>
+			<a href="/">
+				<img src="/scorecard.svg" class="logo" alt="Scorecard Logo" />
+				<h1 class="title">Scorecard</h1>
+			</a>
+		</header>
 
 
-	<main>
-		<div class="card" id="team1">
-			<h2>Team 1</h2>
-			<TeamSelector name="team1"/>
+		<main>
+			<div class="card" id="team1">
+				<h2>Team 1</h2>
+				<TeamSelector name="team1"/>
 
-			<div class="justified">
-				<Score forTeam="team1"/>
-				<button>Reset</button>
+				<div class="justified">
+					<Score forTeam="team1"/>
+					<button>Reset</button>
+				</div>
 			</div>
-		</div>
 
 
-		<div class="card" id="team2">
-			<h2>Team 2</h2>
-			<TeamSelector name="team2"/>
+			<div class="card" id="team2">
+				<h2>Team 2</h2>
+				<TeamSelector name="team2"/>
 
-			<div class="justified">
-				<Score forTeam="team2"/>
-				<button>Reset</button>
-			</div>
-		</div>	
-	</main>
+				<div class="justified">
+					<Score forTeam="team2"/>
+					<button>Reset</button>
+				</div>
+			</div>	
+		</main>
+
+		<footer>
+			<div>&copy; 2022</div>
+			<div>Privacy</div>
+		</footer>
+
 </div>
 
 <style>
 	
-	
+	#app {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		margin: 0;
+	}
+
 	header {
 		display: flex;
 		flex-direction: row;
@@ -79,9 +91,11 @@
 	
 	header .logo, header .title {
 		display: inline-block;
-		vertical-align: middle;
-		height: 2rem;
 		font-size: 2rem;
+		vertical-align: middle;
+
+		border: 1px dotted gray;
+
 	}
 
 	input, select, button {
@@ -104,6 +118,30 @@
 	}
 
 	.card {
-		width: 100%;
+		margin: 1em auto;
+		padding: 1em;
+		width: 50%;
+		border: 1px dotted gray;
 	}
+
+	main {
+		flex: 1;
+		border: 1px dotted gray;
+	}
+
+	footer {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1em;
+		border: 1px solid black;
+		min-width: 320px;
+	}
+
+	footer div {
+		display: inline-block;
+	}
+
+	
 </style>
